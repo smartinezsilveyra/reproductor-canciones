@@ -1,0 +1,345 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+body {
+  padding: 2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light {
+  background-color: #e1e7e9;
+  color: #222;
+}
+
+body.dark {
+  background: linear-gradient(to bottom, #333, #000);
+  background-attachment: fixed;
+  color: #ddd;
+  --dark-hover: #ffedfe;
+}
+
+.app-container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.app-container.light {
+  background-color: #e7eaec;
+  color: #222;
+}
+
+.light form,
+.light li {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+input,
+input.light {
+  background-color: #fff;
+  color: #111;
+  border: 1px solid #ccc;
+}
+
+button,
+button.light {
+  background-color: #2a373a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5f8188;
+}
+
+.app-container.dark {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+form.dark,
+li.dark {
+  background-color: #2a2a2a;
+  color: #f5f5f5;
+  border: 1px solid #444;
+  border-left: 2px solid #999;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.04);
+}
+
+input.dark,
+select.dark {
+  background-color: transparent;
+  border: 1px solid #666;
+  box-shadow: 0px 0px 15px #0003;
+  color: #ddd;
+}
+
+input.dark::placeholder {
+  color: #aaa;
+}
+
+input.dark:focus {
+  outline: none;
+  border-color: var(--dark-hover);
+  box-shadow: 0 0 5px var(--dark-hover);
+}
+
+body.light input:focus {
+  outline: none;
+  border-color: #2a373a;
+  box-shadow: 0 0 5px #2a373a;
+}
+
+button.dark {
+  background-color: transparent;
+  border: 1px solid #666;
+  color: #ddd;
+  box-shadow: 0px 0px 10px #0005;
+}
+
+button.dark:hover {
+  box-shadow: 0 0 10px var(--dark-hover);
+  border-color: var(--dark-hover);
+  color: var(--dark-hover);
+  transition: all 0.5s ease;
+}
+
+body.dark .lite-youtube {
+  border: 1px solid #555;
+  box-shadow: 0 0 20px #0005;
+  border-radius: 6px;
+}
+
+body.dark p {
+  color: #ccc;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+@media (max-width: 320px){
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+
+h2{
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+form {
+  background-color: transparent;
+  padding: 20px 0;
+  margin: auto;
+  box-shadow: 0px 0px 15px #0003;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+form h2 {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+form div {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.input-container{
+  padding:0 1rem;
+}
+
+ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.2rem;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: transparent;
+  border: 1px solid #666;
+  box-shadow: 0px 0px 15px #0003;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #ddd;
+  transition: transform 0.2s ease;
+}
+
+li h3 {
+  margin-bottom: 0.5rem;
+  color: rgb(0, 0, 0);
+}
+
+li p {
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+}
+
+.card-buttons {
+  margin-top: auto;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px #0005;
+}
+
+.lite-youtube {
+  width: 100%;
+  height: 315px;
+  margin-top: 1rem;
+}
+
+.theme-toggle{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.theme-toggle button {
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.sort-button-container, .add-button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+body.dark h3 {
+  color: #ccc;
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: overlay-fade 0.3s ease forwards;
+}
+
+.ReactModal__Content {
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  margin-right: -50% !important;
+  transform: translate(-50%, -50%) !important;
+  position: fixed !important;
+  background-color: #adadad;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 90%;
+  max-width: 600px;
+  max-height: 400px;
+  overflow-y: auto ;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+  animation: modal-fade-slide 0.4s ease forwards;
+}
+
+
+body.dark .ReactModal__Content {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .ReactModal__Content p {
+  color: #000000;
+}
+
+.ReactModal__Content button {
+  background-color: transparent;
+  border: 1px solid #303030;
+  color: #141414;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+body.dark .ReactModal__Content button {
+  border-color: #1b1b1b;
+  color: #161616;
+}
+
+.ReactModal__Content button:hover {
+  box-shadow: 0 0 8px rgb(0, 0, 0);
+}
+
+@keyframes modal-fade-slide {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes overlay-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
