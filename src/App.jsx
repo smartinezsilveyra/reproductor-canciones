@@ -48,7 +48,11 @@ function App() {
       <AddSongForm onAdd={handleAddSong} darkMode={darkMode} />
 
       <h2>Lista de Canciones</h2>
-      <SortButton onSort={() => setSorted(!sorted)} darkMode={darkMode} />
+      <SortButton 
+        onSort={() => setSorted(!sorted)} 
+        darkMode={darkMode} 
+        buttonText={sorted ? "Desordenar" : "Ordenar por Reproducciones"} 
+      />
       <SearchBar value={search} onChange={setSearch} darkMode={darkMode} />
       
       <SongList

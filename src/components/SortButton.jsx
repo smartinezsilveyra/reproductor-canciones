@@ -1,13 +1,12 @@
-function SortButton({ onSort, darkMode }){
+function SortButton({ onSort, darkMode, buttonText }){
     return (
         <div className="sort-button-container">
             <button 
                 onClick={onSort} 
                 className={`sort-button ${darkMode ? 'dark' : ''}`}>
-                Ordenar por Reproducciones
+                {buttonText}
             </button>
         </div>
-
     )
 }
 
